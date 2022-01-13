@@ -1,0 +1,21 @@
+<div class="main">
+  <p class="title">Registration</p>
+  <form [formGroup]="contactForm" (submit)="onSubmit()">
+    <p><label for="firstname">First Name</label></p>
+    <input type="text" id="firstname" formControlName="firstname" [appFormValidation]="contactForm.controls['firstname']">
+
+    <p><label for="lastname">Last Name</label></p>
+    <input type="email" id="lastname" formControlName="lastname" [appFormValidation]="contactForm.controls['lastname']">
+
+    <p><label for="email">Email</label></p>
+    <input type="email" id="email" formControlName="email" [appFormValidation]="contactForm.controls['email']">
+
+    <p><label for="password">Password</label></p>
+    <input type="password" id="password" formControlName="password" [appFormValidation]="contactForm.controls['password']">
+
+    <p><input type="submit" value="Sign in" [disabled] ="contactForm.status === 'INVALID'"></p>
+  </form>
+  <p class="register">
+    <a routerLink="">Log in</a>
+  </p>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card__container">
+    <div class="card" *ngFor="let post of posts">
+      <div class="card__content">
+        <h3 class="card__header">{{post.tile}}</h3>
+        <p class="card__info">{{post.body}}</p>
+        <button class="update" (click)="editPost(post)">Edit Post</button>
+        <button class="delete" (click)="deletePost(post)">Delete Post</button>
+      </div>
+      <div>
+        <app-comment [post]="post"></app-comment>
+      </div>
+    </div>
+  </div>
+</div>

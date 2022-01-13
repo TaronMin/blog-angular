@@ -1,0 +1,12 @@
+<div class="main">
+  <p class="title">Create Post</p>
+  <form [formGroup]="postForm" (submit)="onSubmit()">
+    <p><label for="title">Title</label></p>
+    <input type="text" id="title" formControlName="title" [appFormValidation]="postForm.controls['title']">
+
+    <p><label for="body">Body</label></p>
+    <textarea type="text" id="body" formControlName="body" [appFormValidation]="postForm.controls['body']"></textarea>
+
+    <p><input type="submit" value="Done" [disabled]="postForm.status === 'INVALID'"></p>
+  </form>
+</div>

@@ -1,0 +1,90 @@
+.container{
+  width: 100%;
+  height: 100%;
+}
+.card__container{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.card{
+  width: 400px;
+  background: #3b7287;
+  margin: 10px;
+  border-radius: 5px;
+}
+.card__content{
+  padding: 15px;
+}
+
+.card__header{
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card__info{
+  margin: 15px 0 20px 0;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////
+*/
+.update, .delete,.create-comment {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fac000;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 3rem;
+  padding: 5px 10px;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  margin-right: 15px;
+}
+
+.delete {
+  background: #f82b2b;
+}
+
+.update:hover,
+.update:focus,
+.delete:hover,
+.delete:focus,
+.create-comment:hover,
+.create-comment:focus{
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.update:hover, .delete:hover,.create-comment:hover {
+  transform: translateY(-1px);
+}
+
+.create-comment {
+  background: #4242F4;
+  margin: 10px;
+}

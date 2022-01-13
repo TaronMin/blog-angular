@@ -1,0 +1,44 @@
+.main {
+  width: 400px;
+  margin: 200px auto;
+  background: #3f35ee;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.title {
+  margin: 20px 0 20px 0;
+  font-size: 25px;
+}
+
+form > input {
+  padding: 8px 10px;
+  margin: 10px 0 10px 0;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+input[type="submit"]{
+  display: block;
+  width: 100px;
+  margin: 20px auto;
+  color: aliceblue;
+  background: #000;
+  padding: 8px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.register{
+  margin-bottom: 10px;
+}
+.register a{
+  text-decoration: none;
+  color: aliceblue;
+}

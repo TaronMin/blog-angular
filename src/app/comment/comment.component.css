@@ -1,0 +1,71 @@
+.update, .delete, .create-comment {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fac000;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 3rem;
+  padding: 5px 10px;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  margin-right: 15px;
+}
+
+.delete {
+  background: #f82b2b;
+}
+
+.update:hover,
+.update:focus,
+.delete:hover,
+.delete:focus,
+.create-comment:hover,
+.create-comment:focus {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.update:hover, .delete:hover, .create-comment:hover {
+  transform: translateY(-1px);
+}
+
+.create-comment {
+  background: #4242F4;
+  margin: 10px;
+}
+
+input {
+  padding: 5px;
+  margin: 5px;
+  font-size: 18px;
+  width: 220px;
+  outline: none;
+  border-radius: 2px;
+}
+ul{
+  list-style: none;
+  color: #c1c1c1;
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: .1em;
+}
+li{
+  margin: 10px 5px;
+}
+span {
+  display: inline-block;
+  margin-right: 10px;
+}

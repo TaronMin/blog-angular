@@ -1,0 +1,25 @@
+Comments`
+<form [formGroup]="commentForm">
+  <ul>
+    <li *ngFor="let comment of commentsArray">
+      <p *ngIf="editInputField">
+        <input type="text" value="{{comment.body}}" placeholder="Required" #editInput>
+        <button type="button" class="update" (click)="updateComment(comment,editInput.value)">Update</button>
+        <button type="button" class="delete" (click)="deleteComment(comment.id!)">Delete</button>
+      </p>
+      <p *ngIf="!editInputField">
+        <span>{{comment.body}}</span>
+        <button type="button" class="update" (click)="editInputField = !editInputField">Edit</button>
+        <button type="button" class="delete" (click)="deleteComment(comment.id!)">Delete</button>
+      </p>
+    </li>
+  </ul>
+  <form formArrayName="comments">
+    <div *ngFor="let comment of commentsFormArray.controls; let i = index;">
+      <input type="text" [formControlName]="i" placeholder="Required" #input>
+      <button type="button" class="create-comment" (click)="onSubmit(input.value,i)">Add</button>
+      <button type="button" class="delete" (click)="removeControl(i)">Remove</button>
+    </div>
+  </form>
+  <button type="button" class="create-comment" (click)="addComment()">Add Comment</button>
+</form>

@@ -4,10 +4,8 @@ import {catchError, map, Observable, of} from 'rxjs';
 import {AuthService} from "../auth.service";
 
 @Injectable()
-
-export class GuestGuard implements CanActivate {
-  constructor(private authService: AuthService,private router: Router,
-  ) {
+export class AuthGuard implements CanActivate {
+  constructor(private authService: AuthService, private router: Router) {
   }
 
   canActivate(
@@ -19,12 +17,10 @@ export class GuestGuard implements CanActivate {
   isLogin(): Observable<any> {
     return this.authService.me()
       .pipe(
-        map(val => {
-          this.router.navigate(['post']);
-          return false;
-        }),
+        map(val => true),
         catchError(() => {
-          return of(true);
+          this.router.navigate([""]);
+          return of(false);
         })
       )
   }

@@ -1,0 +1,15 @@
+<div class="main">
+  <p class="title">Log In</p>
+  <form [formGroup]="contactForm" (submit)="onSubmit()">
+    <p><label for="email">Email</label></p>
+    <input type="email" id="email" formControlName="email" [appFormValidation]="contactForm.controls['email']">
+
+    <p><label for="password">Password</label></p>
+    <input type="password" id="password" formControlName="password" [appFormValidation]="contactForm.controls['password']">
+
+    <p><input type="submit" value="Sign in" [disabled]="contactForm.status === 'INVALID'"></p>
+  </form>
+  <p class="register">
+    <a routerLink="/registration">Registration</a>
+  </p>
+</div>
