@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {PostModel} from "../post";
-import {PostService} from "../post.service";
+import {PostDataService} from "../post-data.service";
 
 @Component({
   selector: 'app-post-create',
@@ -12,7 +12,7 @@ export class PostCreateComponent implements OnInit {
 
   newPost: PostModel = {tile: '', body: ''};
 
-  constructor(private postService: PostService, private router: Router) {
+  constructor(private postService: PostDataService, private router: Router) {
   }
 
   ngOnInit(): void {

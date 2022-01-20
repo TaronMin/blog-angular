@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
-import {PostService} from "../post.service";
+import {PostDataService} from "../post-data.service";
 import {Router} from "@angular/router";
 import {PostModel} from "../post";
 
@@ -16,7 +16,7 @@ export class PostFormComponent implements OnInit {
   @Input() postInputModel: PostModel = {tile: "", body: ""};
   @Output() postOutputModel: EventEmitter<PostModel> = new EventEmitter<PostModel>();
 
-  constructor(public formGroup: FormBuilder, private postService: PostService, private router: Router) {
+  constructor(public formGroup: FormBuilder, private postService: PostDataService, private router: Router) {
   }
 
   ngOnInit(): void {

@@ -1,8 +1,9 @@
-.container{
+.container {
   width: 100%;
   height: 100%;
 }
-.card__container{
+
+.card__container {
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -10,17 +11,19 @@
   align-items: flex-start;
   flex-wrap: wrap;
 }
-.card{
+
+.card {
   width: 400px;
   background: #3b7287;
   margin: 10px;
   border-radius: 5px;
 }
-.card__content{
+
+.card__content {
   padding: 15px;
 }
 
-.card__header{
+.card__header {
   font-size: 20px;
   margin-bottom: 25px;
   color: #ffffff;
@@ -30,7 +33,7 @@
   letter-spacing: 2px;
 }
 
-.card__info{
+.card__info {
   margin: 15px 0 20px 0;
   color: #ffffff;
   font-weight: bold;
@@ -40,7 +43,7 @@
 
 /*//////////////////////////////////////////////////////////////////////////
 */
-.update, .delete,.create-comment {
+.update, .delete, .create-comment {
   align-items: center;
   background-clip: padding-box;
   background-color: #fac000;
@@ -76,15 +79,36 @@
 .delete:hover,
 .delete:focus,
 .create-comment:hover,
-.create-comment:focus{
+.create-comment:focus {
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
-.update:hover, .delete:hover,.create-comment:hover {
+.update:hover, .delete:hover, .create-comment:hover {
   transform: translateY(-1px);
 }
 
 .create-comment {
   background: #4242F4;
   margin: 10px;
+}
+
+input {
+  padding: 10px 5px;
+  background: #ffffff;
+  color: black;
+  border-radius: 5px;
+  border: 2px solid #3B7287;
+  outline: none;
+  font-size: 18px;
+  margin: 10px;
+}
+header{
+  top: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  background: #000;
 }

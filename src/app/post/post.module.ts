@@ -2,10 +2,10 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
 import {PostRoutingModule} from './post-routing.module';
-import {PostService} from "./post.service";
+import {PostDataService} from "./post-data.service";
 import { PostFormComponent } from './post-form/post-form.component';
 import {SharedModule} from "../shared/shared.module";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {PostComponent} from "./post/post.component";
 import {PostCreateComponent} from "./post-create/post-create.component";
 import {PostSingleComponent} from "./post-single/post-single.component";
@@ -32,8 +32,9 @@ import {CommentService} from "../comment/comment.service";
     PostRoutingModule,
     SharedModule,
     ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [PostService,AuthGuard,GuestGuard,CommentService],
+  providers: [PostDataService,AuthGuard,GuestGuard,CommentService],
   exports: [
     PostFormComponent
   ]

@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {PostModel} from "../post";
-import {PostService} from "../post.service";
-import {ActivatedRoute, Router} from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { PostModel } from "../post";
+import { PostDataService } from "../post-data.service";
+import { ActivatedRoute, Router } from "@angular/router";
+import { PostSessionService } from "../post-state/post-session.service";
 
 @Component({
   selector: 'app-post-edit',
@@ -12,7 +13,7 @@ export class PostEditComponent implements OnInit {
   postModel: any = null;
   postId: number = 0;
 
-  constructor(private postService: PostService, private router: Router, private route: ActivatedRoute) {
+  constructor(private postService: PostDataService, private router: Router, private route: ActivatedRoute, private postSessionService: PostSessionService) {
   }
 
   ngOnInit(): void {
@@ -29,11 +30,12 @@ export class PostEditComponent implements OnInit {
   }
 
   onSubmit(post: PostModel): void {
+    console.log(post, "edit");
     const postModel = {
-      title: post.tile,
+      tile: post.tile,
       body: post.body,
     };
-    this.postService.changePost(postModel, this.postId).subscribe(() => {
+    this.postSessionService.change(postModel, this.postId).subscribe(() => {
       this.router.navigate(["/post/single"]);
     })
   }
